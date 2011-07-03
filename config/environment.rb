@@ -7,8 +7,8 @@ Errbit::Application.initialize!
 ActionMailer::Base.smtp_settings = {
   :address => "smtp.sendgrid.net",
   :port => 25,
-  :domain => "swap.to",
   :authentication => :plain,
-  :user_name => "tnitsche",
-  :password => "sg_svra031"
+  :domain => ENV['SENDGRID_DOMAIN']
+  :user_name => ENV['SENDGRID_USERNAME'],
+  :password => ENV['SENDGRID_PASSWORD']
 }
