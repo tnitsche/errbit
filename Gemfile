@@ -29,3 +29,7 @@ group :test do
   gem 'factory_girl_rails'
   gem 'email_spec'
 end
+
+group :heroku do
+  gem 'thin'
+end
